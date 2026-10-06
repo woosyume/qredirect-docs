@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n-title="meta.title">QRedirect for Mac</title>
+  <meta name="description" content="QRedirect finds QR codes on your Mac's screen and opens them with a keyboard shortcut.">
+  <meta property="og:title" content="QRedirect for Mac">
+  <meta property="og:description" content="Open the QR code that's already on your screen.">
+  <meta property="og:image" content="assets/hero-en.jpg">
+  <link rel="icon" href="assets/icon.png">
+  <link rel="apple-touch-icon" href="assets/icon.png">
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/i18n.js" defer></script>
+  <script src="assets/demo.js" defer></script>
+</head>
+<body>
+  <header class="masthead">
+    <a class="wordmark" href="./" data-keep-lang><img src="assets/icon.png" alt="" width="22" height="22">QRedirect</a>
+    <nav>
+      <a href="#what" data-i18n="nav.what">What it does</a>
+      <a href="#privacy" data-i18n="nav.privacy">Privacy</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="ko" aria-pressed="false">한국어</button>
+      <button type="button" data-lang="ja" aria-pressed="false">日本語</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <p class="kicker" data-i18n="intro.kicker">A menu bar app for macOS 14 and later</p>
+      <h1 data-i18n="intro.title">Your phone can stay in your pocket.</h1>
+      <p class="lead" data-i18n="intro.lead">QRedirect finds the QR codes on your Mac's screen and opens them with a keyboard shortcut. Slides, PDFs, a screen someone is sharing in a call.</p>
+      <p class="availability"><span class="dot" aria-hidden="true"></span><span data-i18n="intro.store">Coming soon to the Mac App Store.</span></p>
+    </section>
+
+    <!-- A slide with real codes on it. ⌥Q (or the button) runs a working copy of the overlay. -->
+    <section class="demo" aria-labelledby="demo-label">
+      <div class="demo-bar">
+        <p id="demo-label" data-i18n-html="demo.prompt_html">Try it here. Press <kbd>⌥</kbd><kbd>Q</kbd>.</p>
+        <button type="button" class="demo-start" data-i18n="demo.button">or click to scan</button>
+      </div>
+      <div class="stage" id="stage">
+        <div class="slide">
+          <p class="slide-eyebrow">SWIFT TOKYO 2026</p>
+          <p class="slide-title" data-i18n="demo.slideTitle">Thanks for coming.</p>
+          <p class="slide-body" data-i18n="demo.slideBody">More at the link.</p>
+          <figure class="code code-a" data-code="1" data-kind="link">
+            <img src="assets/qr-link.png" alt="" width="496" height="496">
+          </figure>
+          <figure class="code code-b" data-code="2" data-kind="wifi">
+            <img src="assets/qr-wifi.png" alt="" width="496" height="496">
+            <figcaption><span data-i18n="demo.wifiLabel">Guest Wi-Fi</span><br><small>Studio Guest</small></figcaption>
+          </figure>
+        </div>
+        <div class="scrim" aria-hidden="true"></div>
+        <div class="guide">
+          <span data-i18n="demo.guide">2 QR codes</span>
+          <span class="sep" aria-hidden="true"></span>
+          <kbd>1</kbd><kbd>2</kbd><kbd>esc</kbd>
+        </div>
+        <div class="toast" role="status" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="what" id="what">
+      <h2 data-i18n="what.title">What happens to what it finds</h2>
+      <dl class="table">
+        <div><dt data-i18n="what.link.k">Web links</dt><dd data-i18n="what.link.v">Open in your default browser.</dd></div>
+        <div><dt data-i18n="what.email.k">Email addresses</dt><dd data-i18n="what.email.v">Start a new message in your mail app.</dd></div>
+        <div><dt data-i18n="what.wifi.k">Wi-Fi codes</dt><dd data-i18n="what.wifi.v">The password is copied. Paste it when macOS asks.</dd></div>
+        <div><dt data-i18n="what.text.k">Plain text</dt><dd data-i18n="what.text.v">Copied to the clipboard.</dd></div>
+        <div><dt><code>file:</code> <code>javascript:</code> <span data-i18n="what.blocked.k">and unknown apps</span></dt><dd data-i18n="what.blocked.v">Copied, never opened. Look at it before you trust it.</dd></div>
+      </dl>
+
+      <div class="notes">
+        <p data-i18n="what.note1">While the overlay is up it keeps reading the screen. When the presenter moves to the next slide, the frame follows the code.</p>
+        <p data-i18n="what.note2">You can still scroll and click the app underneath. Your keyboard stays with it too; only esc, Enter and the number keys are borrowed until you close the overlay.</p>
+        <p data-i18n="what.note3">More than one code? Each gets a number. Press it.</p>
+      </div>
+    </section>
+
+    <section class="gallery" aria-label="Screenshots">
+      <figure>
+        <img loading="lazy" src="assets/shots/call-en.jpg" data-i18n-src="assets/shots/call-{lang}.jpg" width="1600" height="1067" alt="">
+        <figcaption data-i18n="gallery.call"></figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="assets/shots/wifi-en.jpg" data-i18n-src="assets/shots/wifi-{lang}.jpg" width="1600" height="1067" alt="">
+        <figcaption data-i18n="gallery.wifi"></figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="assets/shots/safe-en.jpg" data-i18n-src="assets/shots/safe-{lang}.jpg" width="1600" height="1067" alt="">
+        <figcaption data-i18n="gallery.safe"></figcaption>
+      </figure>
+      <figure>
+        <img loading="lazy" src="assets/shots/numbers-en.jpg" data-i18n-src="assets/shots/numbers-{lang}.jpg" width="1600" height="1067" alt="">
+        <figcaption data-i18n="gallery.numbers"></figcaption>
+      </figure>
+    </section>
+
+    <section class="privacy" id="privacy">
+      <h2 data-i18n="privacy.title">It has no network access. None.</h2>
+      <p data-i18n="privacy.body">QRedirect asks for Screen Recording so it can look for codes. It looks only after you press the shortcut, reads the picture in memory with Apple's Vision framework, and throws it away. Nothing is saved, and since the app isn't allowed on the network, there's nowhere for it to go.</p>
+      <a href="privacy.html" data-keep-lang data-i18n="privacy.link">Read the privacy policy</a>
+    </section>
+
+    <section class="faq" id="faq">
+      <h2 data-i18n="faq.title">Questions</h2>
+      <dl>
+        <dt data-i18n="faq.restart.q">I allowed Screen Recording and nothing happens.</dt>
+        <dd data-i18n="faq.restart.a">macOS applies it only after the app restarts. Use "Restart QRedirect" in the welcome window, or quit from the menu bar and open it again.</dd>
+        <dt data-i18n="faq.shortcut.q">Can I use a different shortcut?</dt>
+        <dd data-i18n-html="faq.shortcut.a_html">Yes, in Settings. The default is <kbd>⌥</kbd><kbd>Q</kbd>. If a shortcut doesn't respond, something else is probably using it.</dd>
+        <dt data-i18n="faq.close.q">How do I get rid of the overlay?</dt>
+        <dd data-i18n-html="faq.close.a_html"><kbd>esc</kbd>, or the shortcut again. Both work from any app.</dd>
+        <dt data-i18n="faq.history.q">Does it remember what I scanned?</dt>
+        <dd data-i18n="faq.history.a">Recent codes stay in the menu bar menu so you can find them again. They're kept on your Mac only, and you can turn this off or clear it in Settings.</dd>
+        <dt data-i18n="faq.language.q">Can I change the language?</dt>
+        <dd data-i18n="faq.language.a">It follows your Mac. You can also pick English, Korean or Japanese in Settings.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <footer class="colophon">
+    <p data-i18n="footer.maker">QRedirect is a small independent app by Woohyeok Kim.</p>
+    <p><a href="privacy.html" data-keep-lang data-i18n="footer.privacy">Privacy policy</a> <span class="mono">© 2026</span></p>
+  </footer>
+</body>
+</html>
