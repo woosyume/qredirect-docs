@@ -4,55 +4,46 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title data-i18n-title="meta.privacyTitle">Privacy Policy — QRedirect</title>
-  <meta name="description" content="QRedirect collects no data. Screen captures are analyzed on your Mac and discarded.">
+  <meta name="description" data-i18n-description="meta.privacyDescription" content="How QRedirect processes screen images, stores recent QR codes, and handles links and the clipboard.">
   <link rel="icon" href="assets/icon.png">
   <link rel="stylesheet" href="assets/style.css">
   <script src="assets/i18n.js" defer></script>
 </head>
 <body>
   <header class="masthead">
-    <a class="wordmark" href="index.html" data-keep-lang><img src="assets/icon.png" alt="" width="22" height="22">QRedirect</a>
-    <div class="lang" role="group" aria-label="Language" style="margin-left: auto">
+    <a class="wordmark" href="./" data-keep-lang><img src="assets/icon.png" alt="" width="22" height="22">QRedirect</a>
+    <nav><a data-i18n="nav.support" href="support/" data-keep-lang>Support</a> <a data-i18n="footer.privacy" href="privacy.html" data-keep-lang>Privacy policy</a></nav>
+    <div class="lang" role="group" aria-label="Language">
       <button type="button" data-lang="en" aria-pressed="true">EN</button>
       <button type="button" data-lang="ko" aria-pressed="false">한국어</button>
       <button type="button" data-lang="ja" aria-pressed="false">日本語</button>
     </div>
   </header>
-
   <main class="doc">
-      <h1 data-i18n="policy.title">Privacy Policy</h1>
-      <p class="updated" data-i18n="policy.updated">Last updated: October 6, 2026</p>
-      <p data-i18n="policy.intro"></p>
-
-      <h2 data-i18n="policy.collect.title">Information we collect</h2>
-      <p data-i18n="policy.collect.body"></p>
-
-      <h2 data-i18n="policy.screen.title">Screen contents</h2>
-      <p data-i18n="policy.screen.body"></p>
-
-      <h2 data-i18n="policy.local.title">Data stored on your Mac</h2>
-      <ul>
-        <li data-i18n-html="policy.local.item1_html"></li>
-        <li data-i18n-html="policy.local.item2_html"></li>
-      </ul>
-      <p data-i18n="policy.local.body"></p>
-
-      <h2 data-i18n="policy.clipboard.title">Clipboard</h2>
-      <p data-i18n="policy.clipboard.body"></p>
-
-      <h2 data-i18n="policy.links.title">Links you open</h2>
-      <p data-i18n="policy.links.body"></p>
-
-      <h2 data-i18n="policy.children.title">Children</h2>
-      <p data-i18n="policy.children.body"></p>
-
-      <h2 data-i18n="policy.changes.title">Changes</h2>
-      <p data-i18n="policy.changes.body"></p>
-    </main>
-
-  <footer class="colophon">
-    <p data-i18n="footer.maker">QRedirect is a small independent app by Woohyeok Kim.</p>
-    <p><a href="index.html" data-keep-lang data-i18n="footer.home">QRedirect</a> <span class="mono">© 2026</span></p>
-  </footer>
+    <h1 data-i18n="policy.title">Privacy Policy</h1>
+    <p data-i18n="policy.updated" class="updated">Last updated: October 20, 2026</p>
+    <p data-i18n="policy.intro">QRedirect is a macOS app that recognizes QR codes on your screen. This policy distinguishes temporary screen-image processing from locally stored QR history.</p>
+    <h2 data-i18n="policy.access.title" id="access">Data accessed and screen-image processing</h2>
+    <p data-i18n="policy.access.body">When you start a scan using the keyboard shortcut or menu, QRedirect captures full-screen images of connected displays. If a QR code is found and the scan overlay appears, it repeatedly captures the screen to update code positions and contents. Scanning ends when you press Esc, press the shortcut again, or select a code. Simply launching the app does not start continuous capture.</p>
+    <p data-i18n="policy.access.images">QRedirect uses ScreenCaptureKit still images and Apple Vision to recognize QR codes on your device. It does not record video files or audio. Screen images and images around QR codes are temporarily processed in memory for analysis and overlay display; they are not saved as files or uploaded. Images may remain in memory while needed for this processing and display; they are not necessarily discarded immediately after each analysis.</p>
+    <h2 data-i18n="policy.use.title" id="use">Purposes of use</h2>
+    <p data-i18n="policy.use.body">Recognized QR contents are used to preview destinations, open web or email links, copy Wi-Fi passwords or network names, and copy text. Immediately opening a single web link is an optional setting. QRedirect does not automatically connect to Wi-Fi networks.</p>
+    <h2 data-i18n="policy.history.title" id="history">Recent history</h2>
+    <p data-i18n="policy.history.body">Recent history is enabled by default. QRedirect stores up to 30 entries in UserDefaults inside the app sandbox, including the original contents of codes you open or copy and the time of use. It does not record every code it merely detects. Duplicate codes are updated, and the oldest entries are removed when the limit is exceeded. There is no separate expiration period.</p>
+    <p data-i18n="policy.history.wifi">Wi-Fi QR codes are excluded from recent history whether or not they contain a password. Wi-Fi entries left by earlier versions are removed from the app history when the new version launches. Other QR contents may contain personal information.</p>
+    <h2 data-i18n="policy.sharing.title" id="sharing">Third-party transfers</h2>
+    <p data-i18n="policy.sharing.app">The app itself has no accounts, advertising, analytics SDKs, its own crash reporting, data uploads, or cloud sync. QRedirect does not send screen images or recent history to the developer.</p>
+    <p data-i18n="policy.sharing.links">When you open a link, its URL is passed to your default browser or mail app. Subsequent handling is governed by the policies of that app and the destination service. Content you copy goes to the system clipboard. Wi-Fi passwords are marked as concealed for clipboard managers, but this does not guarantee that other apps will not retain them.</p>
+    <h2 data-i18n="policy.retention.title" id="retention">Retention and deletion</h2>
+    <p data-i18n="policy.retention.body">Turning off recent history stops new entries from being saved but leaves existing entries in place. Delete them using Clear History in Settings. Shortcut and other preferences are also stored locally in the app sandbox. Deleting the app does not guarantee that all local data is removed; clear history in the app before uninstalling if you want to remove those entries.</p>
+    <h2 data-i18n="policy.permission.title" id="permission">Withdrawing screen-recording permission</h2>
+    <p data-i18n="policy.permission.body">You can revoke access in macOS System Settings → Privacy &amp; Security → Screen Recording (or Screen &amp; System Audio Recording, depending on your macOS version) by turning QRedirect off. Screen scanning requires this permission. Quit and reopen QRedirect if macOS asks you to restart it after changing permission.</p>
+    <h2 data-i18n="policy.contact.title" id="contact">Contact and updates</h2>
+    <p data-i18n="policy.contact.body">For privacy questions, use the support page or email woosyume@gmail.com. Changes to this policy will be posted here with an updated date.</p>
+    <p><a href="support/" data-keep-lang data-i18n="nav.support">Support</a> · <a href="mailto:woosyume@gmail.com">woosyume@gmail.com</a></p>
+  </main>
+  <footer class="colophon"><p data-i18n="footer.maker">QRedirect is a small independent app by Woohyeok Kim.</p>
+<p><a href="./" data-keep-lang>QRedirect</a> · <a data-i18n="nav.support" href="support/" data-keep-lang>Support</a> · <a data-i18n="footer.privacy" href="privacy.html" data-keep-lang>Privacy policy</a> <span class="mono">© 2026</span></p>
+</footer>
 </body>
 </html>

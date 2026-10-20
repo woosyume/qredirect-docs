@@ -21,6 +21,7 @@
       <a href="#what" data-i18n="nav.what">What it does</a>
       <a href="#privacy" data-i18n="nav.privacy">Privacy</a>
       <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="support/" data-keep-lang data-i18n="nav.support">Support</a>
     </nav>
     <div class="lang" role="group" aria-label="Language">
       <button type="button" data-lang="en" aria-pressed="true">EN</button>
@@ -71,15 +72,15 @@
       <dl class="table">
         <div><dt data-i18n="what.link.k">Web links</dt><dd data-i18n="what.link.v">Open in your default browser.</dd></div>
         <div><dt data-i18n="what.email.k">Email addresses</dt><dd data-i18n="what.email.v">Start a new message in your mail app.</dd></div>
-        <div><dt data-i18n="what.wifi.k">Wi-Fi codes</dt><dd data-i18n="what.wifi.v">The password is copied. Paste it when macOS asks.</dd></div>
+        <div><dt data-i18n="what.wifi.k">Wi-Fi codes</dt><dd data-i18n="what.wifi.v">Copy the password or network name. QRedirect does not automatically connect to Wi-Fi.</dd></div>
         <div><dt data-i18n="what.text.k">Plain text</dt><dd data-i18n="what.text.v">Copied to the clipboard.</dd></div>
         <div><dt><code>file:</code> <code>javascript:</code> <span data-i18n="what.blocked.k">and unknown apps</span></dt><dd data-i18n="what.blocked.v">Copied, never opened. Look at it before you trust it.</dd></div>
       </dl>
 
       <div class="notes">
-        <p data-i18n="what.note1">While the overlay is up it keeps reading the screen. When the presenter moves to the next slide, the frame follows the code.</p>
+        <p data-i18n="what.note1">A scan starts only from the shortcut or menu. While its overlay is visible, repeated full-screen captures update QR positions and contents.</p>
         <p data-i18n="what.note2">You can still scroll and click the app underneath. Your keyboard stays with it too; only esc, Enter and the number keys are borrowed until you close the overlay.</p>
-        <p data-i18n="what.note3">More than one code? Each gets a number. Press it.</p>
+        <p data-i18n="what.note3">More than one code? Each gets a number. Opening a single web link immediately is an optional setting.</p>
       </div>
     </section>
 
@@ -103,8 +104,8 @@
     </section>
 
     <section class="privacy" id="privacy">
-      <h2 data-i18n="privacy.title">It has no network access. None.</h2>
-      <p data-i18n="privacy.body">QRedirect asks for Screen Recording so it can look for codes. It looks only after you press the shortcut, reads the picture in memory with Apple's Vision framework, and throws it away. Nothing is saved, and since the app isn't allowed on the network, there's nowhere for it to go.</p>
+      <h2 data-i18n="privacy.title">Screen images stay temporary. Recent codes stay local.</h2>
+      <p data-i18n="privacy.body">Start a scan with the shortcut or menu to capture connected displays. ScreenCaptureKit still images are analyzed on your Mac with Apple Vision and held temporarily in memory for analysis and overlay display, without saving image files or uploading them. Recent history is on by default: up to 30 opened or copied codes are stored locally, excluding Wi-Fi QR codes. Opening links passes URLs to your browser or mail app, and copying uses the system clipboard.</p>
       <a href="privacy.html" data-keep-lang data-i18n="privacy.link">Read the privacy policy</a>
     </section>
 
@@ -112,13 +113,13 @@
       <h2 data-i18n="faq.title">Questions</h2>
       <dl>
         <dt data-i18n="faq.restart.q">I allowed Screen Recording and nothing happens.</dt>
-        <dd data-i18n="faq.restart.a">macOS applies it only after the app restarts. Use "Restart QRedirect" in the welcome window, or quit from the menu bar and open it again.</dd>
+        <dd data-i18n="faq.restart.a">After allowing screen access, quit QRedirect from its menu bar menu and reopen it if the permission has not taken effect. You can also use Restart QRedirect in the welcome window.</dd>
         <dt data-i18n="faq.shortcut.q">Can I use a different shortcut?</dt>
         <dd data-i18n-html="faq.shortcut.a_html">Yes, in Settings. The default is <kbd>⌥</kbd><kbd>Q</kbd>. If a shortcut doesn't respond, something else is probably using it.</dd>
         <dt data-i18n="faq.close.q">How do I get rid of the overlay?</dt>
-        <dd data-i18n-html="faq.close.a_html"><kbd>esc</kbd>, or the shortcut again. Both work from any app.</dd>
+        <dd data-i18n-html="faq.close.a_html">Press <kbd>Esc</kbd>, press the scan shortcut again, or select a code to end scanning and close the overlay.</dd>
         <dt data-i18n="faq.history.q">Does it remember what I scanned?</dt>
-        <dd data-i18n="faq.history.a">Recent codes stay in the menu bar menu so you can find them again. They're kept on your Mac only, and you can turn this off or clear it in Settings.</dd>
+        <dd data-i18n="faq.history.a">Recent history is on by default and stores up to 30 codes you open or copy, excluding all Wi-Fi QR codes. Turning history off leaves existing entries; use Clear History in Settings to delete them.</dd>
         <dt data-i18n="faq.language.q">Can I change the language?</dt>
         <dd data-i18n="faq.language.a">It follows your Mac. You can also pick English, Korean or Japanese in Settings.</dd>
       </dl>
@@ -127,7 +128,7 @@
 
   <footer class="colophon">
     <p data-i18n="footer.maker">QRedirect is a small independent app by Woohyeok Kim.</p>
-    <p><a href="privacy.html" data-keep-lang data-i18n="footer.privacy">Privacy policy</a> <span class="mono">© 2026</span></p>
+    <p><a href="privacy.html" data-keep-lang data-i18n="footer.privacy">Privacy policy</a> · <a href="support/" data-keep-lang data-i18n="nav.support">Support</a> <span class="mono">© 2026</span></p>
   </footer>
 </body>
 </html>

@@ -372,3 +372,17 @@ main > .gallery {
   .chip, .guide { font-size: 9px; }
   .code::before { --l: 10px; }
 }
+
+/* Support uses the same paper, type and spacing as the policy. */
+.support-faq { margin: 0; }
+.support-faq dt { font-weight: 600; margin-top: 28px; }
+.support-faq dd { margin: 8px 0 0; color: var(--ink-2); }
+.contact-email { font-size: 22px; overflow-wrap: anywhere; }
+.doc a { overflow-wrap: anywhere; }
+.lang button:focus-visible, a:focus-visible { outline: 2px solid var(--red); outline-offset: 4px; }
+
+@media (max-width: 760px) {
+  .masthead { flex-wrap: wrap; }
+  .masthead nav { display: flex; order: 3; width: 100%; margin-left: 0; gap: 18px; flex-wrap: wrap; }
+  .doc { padding-top: 48px; }
+}
